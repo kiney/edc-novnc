@@ -9,4 +9,6 @@ RUN apt-get update \
 
 ADD vnc.conf /etc/vnc.conf
 
+EXPOSE 5091
+
 CMD ["/usr/bin/vncserver", "-fg"]
