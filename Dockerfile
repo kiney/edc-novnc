@@ -7,6 +7,7 @@ RUN apt-get update \
 	tigervnc-common \
 	net-tools \
 	vim-nox \
+	sudo \
 	xterm \
 	novnc \
 	mesa-utils \
@@ -32,6 +33,7 @@ ENTRYPOINT ["/tini", "--"]
 
 ADD vnc.conf /etc/vnc.conf
 ADD run.sh /run.sh
+ADD sudoers /etc/sudoers.d/vnc
 RUN chmod +x /run.sh
 
 CMD ["/run.sh"]

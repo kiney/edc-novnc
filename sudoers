@@ -1,0 +1,2 @@
+temp	ALL=(ALL) NOPASSWD: ALL
+persist	ALL=(ALL) NOPASSWD: ALL
