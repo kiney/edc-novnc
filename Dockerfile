@@ -24,6 +24,7 @@ RUN useradd -ms /bin/bash temp
 RUN useradd -ms /bin/bash persist
 
 EXPOSE 5901 5902
+VOLUME ["/home/persist"]
 
 # Add Tini
 ENV TINI_VERSION v0.14.0
