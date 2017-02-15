@@ -2,7 +2,7 @@
 
 
 # use ENV PASSWORD with  "password" as default
-PWD=${PASSWORD-password}
+PWD=${PASSWORD:-password}
 
 for USER in temp persist
 do
