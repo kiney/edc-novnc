@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # use ENV PASSWORD with  "password" as default
 PWD=${PASSWORD:-password}
 
@@ -13,12 +12,4 @@ do
     su ${USER} -c vncserver
 done
 
-#chmod? -rw------- 1 root root 8 Feb 15 15:28 passwd
-
-# für beide user
-#vncserver ...#["/usr/bin/vncserver", "-fg"]
-
-#vncserver -fg
-bash
-
-# TODO novnc
+/usr/share/novnc/utils/launch.sh --listen 80 --vnc localhost:5901

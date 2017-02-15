@@ -6,6 +6,7 @@ RUN apt-get update \
 	tigervnc-standalone-server \
 	tigervnc-common \
 	net-tools \
+	procps \
 	vim-nox \
 	sudo \
 	xterm \
@@ -23,7 +24,7 @@ RUN apt-get update \
 RUN useradd -ms /bin/bash temp
 RUN useradd -ms /bin/bash persist
 
-EXPOSE 5901 5902
+EXPOSE 80 5901 5902
 VOLUME ["/home/persist"]
 
 # Add Tini
