@@ -1,5 +1,7 @@
 FROM debian:stretch
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # install basic and VNC stuff
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
