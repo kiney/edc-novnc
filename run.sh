@@ -12,4 +12,8 @@ do
     su ${USER} -c vncserver
 done
 
-/usr/share/novnc/utils/launch.sh --listen 80 --vnc localhost:5901
+for DISP in 1 2
+do
+    /usr/share/novnc/utils/launch.sh --listen 608${DISP} --vnc localhost:590${DISP} &
+done
+bash

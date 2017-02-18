@@ -31,7 +31,7 @@ RUN apt-get update \
 RUN useradd -ms /bin/bash temp
 RUN useradd -ms /bin/bash persist
 
-EXPOSE 80 5901 5902
+EXPOSE 6081 6082 5901 5902
 VOLUME ["/home/persist"]
 
 # Add Tini
