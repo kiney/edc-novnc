@@ -1,5 +1,7 @@
 FROM debian:stretch
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # install basic and VNC stuff
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
@@ -12,7 +14,12 @@ RUN apt-get update \
 	xterm \
 	novnc \
 	mesa-utils \
-	libgl1-mesa-dri
+	libgl1-mesa-dri \
+	locales
+
+ENV LANG C.UTF-8
+ENV LANGUAGE C.UTF-8
+ENV LC_ALL C.UTF-8
 
 # install desktop environment (xfce for now... which seems to need dbus-x11)
 RUN apt-get update \
